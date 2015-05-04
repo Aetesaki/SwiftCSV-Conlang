@@ -1,6 +1,8 @@
 # SwiftCSV-Conlang
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
+
 original credit goes to [naoty](https://github.com/naoty)
 
 This fork will contain additions for importing non-csv-files into a csv-dataset.
@@ -86,6 +88,8 @@ Then run `carthage update` and add the framework to your project. For more detai
 SwiftCSV is available under the MIT license. See the LICENSE file for more info.
 
 ## Author
+
 [Aetesaki](https:/github.com/Aetesaki)
+
 Original author: [naoty](https://github.com/naoty)
 

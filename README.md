@@ -1,6 +1,9 @@
-# SwiftCSV
+# SwiftCSV-Conlang
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+original credit goes to [naoty](https://github.com/naoty)
+
+This fork will contain additions for importing non-csv-files into a csv-dataset.
 
 ## Requirements
 
@@ -59,13 +62,13 @@ SwiftCSV is available through CocoaPods, to install it simply add the following 
 
 ```ruby
 platform :ios, "8.0"
-pod "SwiftCSV"
+pod "SwiftCSV-Conlang"
 ```
 
 SwiftCSV can also be installed using Carthage for version 0.1.1 and higher. To install, add the following to your Cartfile.
 
 ```
-github "naoty/SwiftCSV" ~> 0.1.1
+github "Aetesaki/SwiftCSV-Conlang" ~> 0.1.1
 ```
 
 Then run `carthage update` and add the framework to your project. For more details, see the Carthage repository. 
@@ -83,6 +86,6 @@ Then run `carthage update` and add the framework to your project. For more detai
 SwiftCSV is available under the MIT license. See the LICENSE file for more info.
 
 ## Author
-
-[naoty](https://github.com/naoty)
+[Aetesaki](https:/github.com/Aetesaki)
+Original author: [naoty](https://github.com/naoty)
 

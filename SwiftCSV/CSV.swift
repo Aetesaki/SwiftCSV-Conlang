@@ -13,9 +13,15 @@ public class CSV {
     public var rows: [Dictionary<String, String>] = []
     public var columns = Dictionary<String, [String]>()
     var delimiter = NSCharacterSet(charactersInString: ",")
-    
+
+    // ------------------------------------------------------------------------
+    // Initializations
+    // ------------------------------------------------------------------------
     public init?(contentsOfURL url: NSURL, delimiter: NSCharacterSet, encoding: UInt, error: NSErrorPointer) {
+        // load file
         let csvString = String(contentsOfURL: url, encoding: encoding, error: error);
+        
+        // if file was loaded, populate table
         if let csvStringToParse = csvString {
             self.delimiter = delimiter
             
@@ -30,15 +36,21 @@ public class CSV {
     }
     
     public convenience init?(contentsOfURL url: NSURL, error: NSErrorPointer) {
+        // Comma separated value file with UTF-8 encoding
         let comma = NSCharacterSet(charactersInString: ",")
         self.init(contentsOfURL: url, delimiter: comma, encoding: NSUTF8StringEncoding, error: error)
     }
     
     public convenience init?(contentsOfURL url: NSURL, encoding: UInt, error: NSErrorPointer) {
+        // Comma separated value file of chosen encoding
         let comma = NSCharacterSet(charactersInString: ",")
         self.init(contentsOfURL: url, delimiter: comma, encoding: encoding, error: error)
     }
     
+    // ------------------------------------------------------------------------
+    // Parser functions
+    // ------------------------------------------------------------------------
+
     func parseHeaders(fromLines lines: [String]) -> [String] {
         return lines[0].componentsSeparatedByCharactersInSet(self.delimiter)
     }
